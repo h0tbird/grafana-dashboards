@@ -1,5 +1,5 @@
 {
-  "id": 2,
+  "id": 4,
   "title": "etcd",
   "originalTitle": "etcd",
   "tags": [],
@@ -67,11 +67,11 @@
               "calculatedInterval": "2s",
               "datasourceErrors": {},
               "errors": {},
-              "expr": "sum(rate(etcd_store_reads_total{job=\"etcd\"}[1m])) by (action)",
+              "expr": "etcd_store_reads_total:sum_rate_1m:by_action",
               "intervalFactor": 2,
               "legendFormat": "{{action}}",
               "metric": "",
-              "prometheusLink": "http://core-1.cell-1.dc-1.demo.lan:9191/graph#%5B%7B%22expr%22%3A%22sum(rate(etcd_store_reads_total%7Bjob%3D%5C%22etcd%5C%22%7D%5B1m%5D))%20by%20(action)%22%2C%22range_input%22%3A%223600s%22%2C%22end_input%22%3A%222015-8-23%208%3A58%22%2C%22step_input%22%3A%22%22%2C%22stacked%22%3Afalse%2C%22tab%22%3A0%7D%5D"
+              "prometheusLink": "http://core-1.cell-1.ofi.xnood.com:9191/graph#%5B%7B%22expr%22%3A%22etcd_store_reads_total%3Asum_rate_1m%3Aby_action%22%2C%22range_input%22%3A%22900s%22%2C%22end_input%22%3A%222015-8-26%207%3A36%22%2C%22step_input%22%3A%22%22%2C%22stacked%22%3Afalse%2C%22tab%22%3A0%7D%5D"
             }
           ],
           "timeFrom": null,
@@ -140,11 +140,11 @@
               "calculatedInterval": "2s",
               "datasourceErrors": {},
               "errors": {},
-              "expr": "max(rate(etcd_store_writes_total{job=\"etcd\"}[1m])) by (action)",
+              "expr": "etcd_store_writes_total:max_rate_1m:by_action",
               "intervalFactor": 2,
               "legendFormat": "{{action}}",
               "metric": "",
-              "prometheusLink": "http://core-1.cell-1.dc-1.demo.lan:9191/graph#%5B%7B%22expr%22%3A%22max(rate(etcd_store_writes_total%7Bjob%3D%5C%22etcd%5C%22%7D%5B1m%5D))%20by%20(action)%22%2C%22range_input%22%3A%223600s%22%2C%22end_input%22%3A%222015-8-23%208%3A58%22%2C%22step_input%22%3A%22%22%2C%22stacked%22%3Afalse%2C%22tab%22%3A0%7D%5D"
+              "prometheusLink": "http://core-1.cell-1.ofi.xnood.com:9191/graph#%5B%7B%22expr%22%3A%22etcd_store_writes_total%3Amax_rate_1m%3Aby_action%22%2C%22range_input%22%3A%22900s%22%2C%22end_input%22%3A%222015-8-26%207%3A29%22%2C%22step_input%22%3A%22%22%2C%22stacked%22%3Afalse%2C%22tab%22%3A0%7D%5D"
             }
           ],
           "timeFrom": null,
@@ -163,8 +163,8 @@
           ]
         }
       ],
-      "title": "Etcd Core Servers",
-      "showTitle": true
+      "showTitle": true,
+      "title": "Etcd Core Servers"
     },
     {
       "collapse": false,
@@ -217,11 +217,11 @@
               "calculatedInterval": "2s",
               "datasourceErrors": {},
               "errors": {},
-              "expr": "sum(rate(etcd_store_watch_requests_total{job=\"etcd\"}[1m]))",
+              "expr": "etcd_store_watch_requests_total:sum_rate_1m",
               "intervalFactor": 2,
               "legendFormat": "Requests per second",
               "metric": "",
-              "prometheusLink": "http://core-1.cell-1.dc-1.demo.lan:9191/graph#%5B%7B%22expr%22%3A%22sum(rate(etcd_store_watch_requests_total%7Bjob%3D%5C%22etcd%5C%22%7D%5B1m%5D))%22%2C%22range_input%22%3A%223600s%22%2C%22end_input%22%3A%222015-8-23%208%3A59%22%2C%22step_input%22%3A%22%22%2C%22stacked%22%3Afalse%2C%22tab%22%3A0%7D%5D"
+              "prometheusLink": "http://core-1.cell-1.ofi.xnood.com:9191/graph#%5B%7B%22expr%22%3A%22etcd_store_watch_requests_total%3Asum_rate_1m%22%2C%22range_input%22%3A%22900s%22%2C%22end_input%22%3A%222015-8-26%207%3A29%22%2C%22step_input%22%3A%22%22%2C%22stacked%22%3Afalse%2C%22tab%22%3A0%7D%5D"
             }
           ],
           "timeFrom": null,
@@ -285,11 +285,11 @@
               "calculatedInterval": "2s",
               "datasourceErrors": {},
               "errors": {},
-              "expr": "sum(etcd_store_watchers{job=\"etcd\"})",
+              "expr": "etcd_store_watchers:sum",
               "intervalFactor": 2,
               "legendFormat": "Active watchers",
               "metric": "",
-              "prometheusLink": "http://core-1.cell-1.dc-1.demo.lan:9191/graph#%5B%7B%22expr%22%3A%22sum(etcd_store_watchers%7Bjob%3D%5C%22etcd%5C%22%7D)%22%2C%22range_input%22%3A%223600s%22%2C%22end_input%22%3A%222015-8-23%208%3A59%22%2C%22step_input%22%3A%22%22%2C%22stacked%22%3Afalse%2C%22tab%22%3A0%7D%5D"
+              "prometheusLink": "http://core-1.cell-1.ofi.xnood.com:9191/graph#%5B%7B%22expr%22%3A%22etcd_store_watchers%3Asum%22%2C%22range_input%22%3A%22900s%22%2C%22end_input%22%3A%222015-8-26%207%3A30%22%2C%22step_input%22%3A%22%22%2C%22stacked%22%3Afalse%2C%22tab%22%3A0%7D%5D"
             }
           ],
           "timeFrom": null,
@@ -361,11 +361,11 @@
               "calculatedInterval": "2s",
               "datasourceErrors": {},
               "errors": {},
-              "expr": "sum(rate(etcd_proxy_handled_total{job=\"etcd\"}[1m])) by (method)",
+              "expr": "etcd_proxy_handled_total:sum_rate_1m:by_method",
               "intervalFactor": 2,
               "legendFormat": "{{method}}",
               "metric": "",
-              "prometheusLink": "http://core-1.cell-1.dc-1.demo.lan:9191/graph#%5B%7B%22expr%22%3A%22sum(rate(etcd_proxy_handled_total%7Bjob%3D%5C%22etcd%5C%22%7D%5B1m%5D))%20by%20(method)%22%2C%22range_input%22%3A%223601s%22%2C%22end_input%22%3A%222015-8-23%209%3A0%22%2C%22step_input%22%3A%22%22%2C%22stacked%22%3Afalse%2C%22tab%22%3A0%7D%5D"
+              "prometheusLink": "http://core-1.cell-1.ofi.xnood.com:9191/graph#%5B%7B%22expr%22%3A%22etcd_proxy_handled_total%3Asum_rate_1m%3Aby_method%22%2C%22range_input%22%3A%22900s%22%2C%22end_input%22%3A%222015-8-26%207%3A37%22%2C%22step_input%22%3A%22%22%2C%22stacked%22%3Afalse%2C%22tab%22%3A0%7D%5D"
             }
           ],
           "timeFrom": null,
@@ -445,23 +445,23 @@
               "calculatedInterval": "2s",
               "datasourceErrors": {},
               "errors": {},
-              "expr": "histogram_quantile(0.9, sum(increase(etcd_proxy_handling_duration_seconds_bucket{job=\"etcd\",method=\"GET\"}[5m])) by (le))*1000",
+              "expr": "etcd_proxy_handling_duration_seconds_bucket:get:histogram_quantile",
               "hide": false,
               "intervalFactor": 2,
               "legendFormat": "GET",
               "metric": "",
-              "prometheusLink": "http://core-1.cell-1.ofi.xnood.com:9191/graph#%5B%7B%22expr%22%3A%22histogram_quantile(0.9%2C%20sum(increase(etcd_proxy_handling_duration_seconds_bucket%7Bjob%3D%5C%22etcd%5C%22%2Cmethod%3D%5C%22GET%5C%22%7D%5B5m%5D))%20by%20(le))*1000%22%2C%22range_input%22%3A%223600s%22%2C%22end_input%22%3A%222015-8-24%2010%3A26%22%2C%22step_input%22%3A%22%22%2C%22stacked%22%3Afalse%2C%22tab%22%3A0%7D%5D"
+              "prometheusLink": "http://core-1.cell-1.ofi.xnood.com:9191/graph#%5B%7B%22expr%22%3A%22etcd_proxy_handling_duration_seconds_bucket%3Aget%3Ahistogram_quantile%22%2C%22range_input%22%3A%22900s%22%2C%22end_input%22%3A%222015-8-26%207%3A38%22%2C%22step_input%22%3A%22%22%2C%22stacked%22%3Afalse%2C%22tab%22%3A0%7D%5D"
             },
             {
               "calculatedInterval": "2s",
               "datasourceErrors": {},
               "errors": {},
-              "expr": "histogram_quantile(0.9, sum(increase(etcd_proxy_handling_duration_seconds_bucket{job=\"etcd\",method!=\"GET\"}[5m])) by (le))*1000",
+              "expr": "etcd_proxy_handling_duration_seconds_bucket:no_get:histogram_quantile",
               "hide": false,
               "intervalFactor": 2,
               "legendFormat": "!GET",
               "metric": "",
-              "prometheusLink": "http://core-1.cell-1.ofi.xnood.com:9191/graph#%5B%7B%22expr%22%3A%22histogram_quantile(0.9%2C%20sum(increase(etcd_proxy_handling_duration_seconds_bucket%7Bjob%3D%5C%22etcd%5C%22%2Cmethod!%3D%5C%22GET%5C%22%7D%5B5m%5D))%20by%20(le))*1000%22%2C%22range_input%22%3A%223600s%22%2C%22end_input%22%3A%222015-8-24%2010%3A26%22%2C%22step_input%22%3A%22%22%2C%22stacked%22%3Afalse%2C%22tab%22%3A0%7D%5D",
+              "prometheusLink": "http://core-1.cell-1.ofi.xnood.com:9191/graph#%5B%7B%22expr%22%3A%22etcd_proxy_handling_duration_seconds_bucket%3Ano_get%3Ahistogram_quantile%22%2C%22range_input%22%3A%22900s%22%2C%22end_input%22%3A%222015-8-26%207%3A38%22%2C%22step_input%22%3A%22%22%2C%22stacked%22%3Afalse%2C%22tab%22%3A0%7D%5D",
               "target": ""
             }
           ],
@@ -482,8 +482,8 @@
           ]
         }
       ],
-      "title": "Etcd Proxies",
-      "showTitle": true
+      "showTitle": true,
+      "title": "Etcd Proxies"
     }
   ],
   "nav": [
